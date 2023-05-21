@@ -1,0 +1,7 @@
+.pio
+.svn
+.vscode
+src/myauth.h
+test
+datasheets
+

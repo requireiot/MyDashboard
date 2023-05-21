@@ -1,0 +1,459 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "MyDashboard (ePaper version)"
+Date ""
+Rev ""
+Comp ""
+Comment1 "$Id: $"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP8266:ESP-12F U2
+U 1 1 622F1878
+P 2500 2800
+F 0 "U2" H 2500 3250 50  0000 C CNN
+F 1 "ESP-12F" H 2500 3350 50  0000 C CNN
+F 2 "" H 2500 2800 50  0001 C CNN
+F 3 "" H 2500 2800 50  0001 C CNN
+	1    2500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 622FE1FD
+P 1450 2300
+F 0 "R4" H 1509 2346 50  0000 L CNN
+F 1 "10k" H 1509 2255 50  0000 L CNN
+F 2 "" H 1450 2300 50  0001 C CNN
+F 3 "~" H 1450 2300 50  0001 C CNN
+	1    1450 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 622FE79F
+P 1550 2300
+F 0 "R2" H 1609 2346 50  0000 L CNN
+F 1 "10k" H 1609 2255 50  0000 L CNN
+F 2 "" H 1550 2300 50  0001 C CNN
+F 3 "~" H 1550 2300 50  0001 C CNN
+	1    1550 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3100 3700 3100
+$Comp
+L Device:R_Small R5
+U 1 1 6230CCDE
+P 3700 3700
+F 0 "R5" H 3759 3746 50  0000 L CNN
+F 1 "10k" H 3759 3655 50  0000 L CNN
+F 2 "" H 3700 3700 50  0001 C CNN
+F 3 "~" H 3700 3700 50  0001 C CNN
+	1    3700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 3600 3700 3500
+$Comp
+L Switch:SW_Push SW2
+U 1 1 6230E8A8
+P 3500 3550
+F 0 "SW2" V 3454 3698 50  0000 L CNN
+F 1 "FLASH" V 3545 3698 50  0000 L CNN
+F 2 "" H 3500 3750 50  0001 C CNN
+F 3 "~" H 3500 3750 50  0001 C CNN
+	1    3500 3550
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	3500 2900 3400 2900
+$Comp
+L Device:R_Small R7
+U 1 1 62311A0C
+P 3500 2300
+F 0 "R7" H 3559 2346 50  0000 L CNN
+F 1 "10k" H 3559 2255 50  0000 L CNN
+F 2 "" H 3500 2300 50  0001 C CNN
+F 3 "~" H 3500 2300 50  0001 C CNN
+	1    3500 2300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2900 3500 2400
+$Comp
+L Device:R_Small R6
+U 1 1 62313631
+P 3600 2300
+F 0 "R6" H 3659 2346 50  0000 L CNN
+F 1 "10k" H 3659 2255 50  0000 L CNN
+F 2 "" H 3600 2300 50  0001 C CNN
+F 3 "~" H 3600 2300 50  0001 C CNN
+	1    3600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2050 3500 2200
+Wire Wire Line
+	3600 2400 3600 3000
+Wire Wire Line
+	3600 3000 3400 3000
+$Comp
+L power:+3V3 #PWR05
+U 1 1 62316976
+P 1200 1900
+F 0 "#PWR05" H 1200 1750 50  0001 C CNN
+F 1 "+3V3" H 1215 2073 50  0000 C CNN
+F 2 "" H 1200 1900 50  0001 C CNN
+F 3 "" H 1200 1900 50  0001 C CNN
+	1    1200 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 62316FF3
+P 1700 3600
+F 0 "SW1" V 1650 3400 50  0000 L CNN
+F 1 "RESET" V 1750 3300 50  0000 L CNN
+F 2 "" H 1700 3800 50  0001 C CNN
+F 3 "~" H 1700 3800 50  0001 C CNN
+	1    1700 3600
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 6231AE17
+P 1200 4200
+F 0 "#PWR04" H 1200 3950 50  0001 C CNN
+F 1 "GND" H 1205 4027 50  0000 C CNN
+F 2 "" H 1200 4200 50  0001 C CNN
+F 3 "" H 1200 4200 50  0001 C CNN
+	1    1200 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 4200 1200 3900
+Wire Wire Line
+	1550 2500 1550 2400
+Wire Wire Line
+	1450 2400 1450 2700
+Wire Wire Line
+	1450 2700 1600 2700
+Wire Wire Line
+	1550 2500 1600 2500
+$Comp
+L Device:CP_Small C1
+U 1 1 6236406E
+P 1350 3700
+F 0 "C1" H 1200 3800 50  0000 L CNN
+F 1 "1000uF" H 1100 3600 50  0000 L CNN
+F 2 "" H 1350 3700 50  0001 C CNN
+F 3 "~" H 1350 3700 50  0001 C CNN
+	1    1350 3700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 623A7347
+P 1200 3700
+F 0 "C2" H 1292 3746 50  0000 L CNN
+F 1 "100n" H 1292 3655 50  0000 L CNN
+F 2 "" H 1200 3700 50  0001 C CNN
+F 3 "~" H 1200 3700 50  0001 C CNN
+	1    1200 3700
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	5850 7500 5850 950 
+Wire Wire Line
+	1550 2500 1550 3400
+Connection ~ 1550 2500
+Wire Wire Line
+	1700 3800 1700 3900
+$Comp
+L Diode:1N5817 D1
+U 1 1 624C9C54
+P 900 2650
+F 0 "D1" V 950 2350 50  0000 L CNN
+F 1 "1N5817" V 850 2250 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 900 2475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 900 2650 50  0001 C CNN
+	1    900  2650
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	900  2500 1550 2500
+Wire Wire Line
+	900  2800 1600 2800
+Wire Wire Line
+	1200 1900 1200 2050
+Wire Wire Line
+	1200 3600 1200 3550
+Wire Wire Line
+	1200 2050 1450 2050
+Connection ~ 1200 2050
+Wire Wire Line
+	1450 2200 1450 2050
+Connection ~ 1450 2050
+Wire Wire Line
+	1450 2050 1550 2050
+Wire Wire Line
+	1550 2200 1550 2050
+Connection ~ 1550 2050
+Wire Wire Line
+	1550 2050 3500 2050
+Wire Wire Line
+	1200 3900 1350 3900
+Wire Wire Line
+	1350 3900 1350 3800
+Connection ~ 1200 3900
+Wire Wire Line
+	1200 3900 1200 3800
+Wire Wire Line
+	1350 3600 1350 3550
+Wire Wire Line
+	1350 3550 1200 3550
+Connection ~ 1200 3550
+Wire Wire Line
+	1350 3900 1700 3900
+Connection ~ 1350 3900
+Wire Wire Line
+	1700 3900 3500 3900
+Connection ~ 1700 3900
+Wire Wire Line
+	3600 3900 3700 3900
+Connection ~ 3600 3900
+Wire Wire Line
+	1550 3400 1700 3400
+Wire Wire Line
+	3700 3800 3700 3900
+Wire Wire Line
+	3600 3200 3600 3900
+Wire Wire Line
+	3600 2200 3600 2050
+Wire Wire Line
+	3600 2050 3500 2050
+Connection ~ 3500 2050
+Wire Wire Line
+	3400 3200 3600 3200
+Wire Wire Line
+	3500 2900 3500 3350
+Connection ~ 3500 2900
+Wire Wire Line
+	3500 3750 3500 3900
+Connection ~ 3500 3900
+Wire Wire Line
+	3500 3900 3600 3900
+Text GLabel 850  3100 0    50   Input ~ 0
+MOSI
+Text GLabel 850  2900 0    50   Input ~ 0
+SCLK
+Wire Wire Line
+	3400 2700 4750 2700
+$Comp
+L Diode:1N5817 D3
+U 1 1 6244C5BF
+P 3900 2900
+F 0 "D3" H 3750 2950 50  0000 C CNN
+F 1 "1N5817" H 4150 2950 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3900 2725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 3900 2900 50  0001 C CNN
+	1    3900 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5817 D2
+U 1 1 6244CD52
+P 3850 3000
+F 0 "D2" H 3700 3050 50  0000 C CNN
+F 1 "1N5817" H 4100 3050 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3850 2825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 3850 3000 50  0001 C CNN
+	1    3850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2900 3750 2900
+Wire Wire Line
+	3600 3000 3700 3000
+Connection ~ 3600 3000
+Wire Wire Line
+	4050 2900 4750 2900
+Wire Wire Line
+	4000 3000 4750 3000
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 62455D6F
+P 4500 4050
+F 0 "Q1" H 4704 4096 50  0000 L CNN
+F 1 "2N7000" H 4704 4005 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4700 3975 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 4500 4050 50  0001 L CNN
+	1    4500 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3500 3700 3500
+Connection ~ 3700 3500
+Wire Wire Line
+	3700 3500 3700 3100
+$Comp
+L eBay:ePaper-2in9-module U3
+U 1 1 62473B86
+P 5300 3100
+F 0 "U3" H 5400 2600 50  0000 R CNN
+F 1 "ePaper-2in9-module" V 5100 3500 50  0000 R CNN
+F 2 "" H 4950 3100 50  0001 C CNN
+F 3 "" H 4950 3100 50  0001 C CNN
+	1    5300 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	850  2900 1600 2900
+Wire Wire Line
+	850  3100 1600 3100
+$Comp
+L power:GND #PWR07
+U 1 1 62490308
+P 4700 3600
+F 0 "#PWR07" H 4700 3350 50  0001 C CNN
+F 1 "GND" H 4705 3427 50  0000 C CNN
+F 2 "" H 4700 3600 50  0001 C CNN
+F 3 "" H 4700 3600 50  0001 C CNN
+	1    4700 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3600 4700 3400
+Wire Wire Line
+	4700 3400 4750 3400
+Wire Wire Line
+	4500 2800 4500 3500
+Wire Wire Line
+	4500 3500 4750 3500
+Wire Wire Line
+	3400 2800 4500 2800
+$Comp
+L power:GND #PWR06
+U 1 1 62494382
+P 4600 4350
+F 0 "#PWR06" H 4600 4100 50  0001 C CNN
+F 1 "GND" H 4605 4177 50  0000 C CNN
+F 2 "" H 4600 4350 50  0001 C CNN
+F 3 "" H 4600 4350 50  0001 C CNN
+	1    4600 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 4350 4600 4250
+Wire Wire Line
+	4600 3850 4600 2800
+Wire Wire Line
+	4600 2800 4750 2800
+Wire Wire Line
+	4000 3500 4000 4050
+Wire Wire Line
+	4000 4050 4300 4050
+Text GLabel 4400 3100 0    50   Input ~ 0
+SCLK
+Text GLabel 4400 3200 0    50   Input ~ 0
+MOSI
+Wire Wire Line
+	4400 3100 4750 3100
+Wire Wire Line
+	4400 3200 4750 3200
+$Comp
+L power:+BATT #PWR01
+U 1 1 62421423
+P 1050 1650
+F 0 "#PWR01" H 1050 1500 50  0001 C CNN
+F 1 "+BATT" V 1065 1777 50  0000 L CNN
+F 2 "" H 1050 1650 50  0001 C CNN
+F 3 "" H 1050 1650 50  0001 C CNN
+	1    1050 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3550 1200 3200
+Wire Wire Line
+	1200 2050 1200 3200
+Connection ~ 1200 3200
+Wire Wire Line
+	1200 3200 1600 3200
+$Comp
+L eBay:FTDI-Module U1
+U 1 1 64681076
+P 5125 1400
+F 0 "U1" H 5453 1453 60  0000 L CNN
+F 1 "Serial" H 5453 1347 60  0000 L CNN
+F 2 "" H 5525 950 60  0000 C CNN
+F 3 "" H 5525 950 60  0000 C CNN
+	1    5125 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1650 1050 2050
+Wire Wire Line
+	1050 2050 1200 2050
+$Comp
+L Jumper:Jumper_2_Open JP1
+U 1 1 64685EBE
+P 3550 1450
+F 0 "JP1" H 3550 1685 50  0000 C CNN
+F 1 "power via serial" H 3550 1594 50  0000 C CNN
+F 2 "" H 3550 1450 50  0001 C CNN
+F 3 "~" H 3550 1450 50  0001 C CNN
+	1    3550 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 64687F4A
+P 4525 1750
+F 0 "#PWR03" H 4525 1500 50  0001 C CNN
+F 1 "GND" H 4530 1577 50  0000 C CNN
+F 2 "" H 4525 1750 50  0001 C CNN
+F 3 "" H 4525 1750 50  0001 C CNN
+	1    4525 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4525 1750 4525 1650
+Wire Wire Line
+	4525 1650 4625 1650
+Wire Wire Line
+	4625 1450 3750 1450
+$Comp
+L power:+3V3 #PWR02
+U 1 1 6468B44A
+P 3000 1250
+F 0 "#PWR02" H 3000 1100 50  0001 C CNN
+F 1 "+3V3" H 3015 1423 50  0000 C CNN
+F 2 "" H 3000 1250 50  0001 C CNN
+F 3 "" H 3000 1250 50  0001 C CNN
+	1    3000 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 1450 3000 1450
+Wire Wire Line
+	3000 1450 3000 1250
+Wire Wire Line
+	4625 1250 4025 1250
+Wire Wire Line
+	4025 1250 4025 2500
+Wire Wire Line
+	4025 2500 3400 2500
+Wire Wire Line
+	4625 1350 4075 1350
+Wire Wire Line
+	4075 1350 4075 2600
+Wire Wire Line
+	4075 2600 3400 2600
+$EndSCHEMATC

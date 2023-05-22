@@ -5,7 +5,7 @@
  * Created		: 01-Mar-2022
  * Tabsize		: 4
  * 
- * This Revision: $Id: MyDashboard.cpp 1513 2023-05-21 08:35:41Z  $
+ * This Revision: $Id: MyDashboard.cpp 1514 2023-05-22 08:01:36Z  $
  */
 
 /*
@@ -926,9 +926,9 @@ void setup()
     // turn off Wifi now if we intend to go to sleep later
     if (!emergencyMode) {
         WiFi.disconnect();
-        WiFi.forceSleepBegin(); 
-        yield();
         WiFi.mode(WIFI_OFF);
+        yield();
+        //WiFi.forceSleepBegin(); 
     }
 
     LittleFS.end();
@@ -947,10 +947,6 @@ void setup()
     ePaper.WaitUntilIdle();
     STOPWATCH_END("WaitUntilIdle")
 
-    // prepare for shutdown
-    //ePaper.Sleep();
-    //ePaper.Reset();
-
 //----- now enter deep sleep ---------------------------------------------------
 
     uint32_t t_setup_end = millis();
@@ -961,7 +957,11 @@ void setup()
     Serial.flush();
 
     prepareShutdown();
-    ESP.deepSleep( REPORT_INTERVAL * 1000ull /*, WAKE_RF_DISABLED*/ , RF_NO_CAL );
+    ESP.deepSleepInstant( 
+        REPORT_INTERVAL * 1000ull ,
+        // WAKE_RF_DISABLED 
+        RF_NO_CAL 
+    );
     // module goes into deep sleep here
 }
 

@@ -102,7 +102,5 @@ Power consumption, ESP8266 with 2.9" e-Ink, during deep sleep:
 These factors contribute to power consumption or battery drain, in decreasing order of importance:
 1. the self-discharge of the batteries, according to [[1]](http://www.gammon.com.au/power), about 80 µA or **1.92 mAh** per day
 2. wake time with WiFi on, at 90 mA x ~2s per wakeup, or **1.2 mAh** per day
-3. wake time with WiFi off, waiting for the display to refresh, at 5mA x 18s per wakeup, or **0.6 mAh** per day
+3. wake time with WiFi off, waiting for the display to refresh, at ~5mA x 18s per wakeup, or **0.6 mAh** per day
 4. deep sleep, at ~20 µA or **0.48 mAh** per day -- if we were using a development module with 250 µA current consumption in deep sleep, this would rise to **6 mAh** per day!
-
-I noticed a mysterious, very short (100ms) peak in power consumption at 80mA, just before entering deep sleep. Can't exxxxxxxxxxxxxxxxxxplain it, didn't bother to explore further, because it is very short.

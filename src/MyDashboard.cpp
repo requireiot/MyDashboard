@@ -61,9 +61,8 @@
 #include <NTPClient.h>          // MIT license, https://github.com/arduino-libraries/NTPClient
 #include <Array.h>              // 3-clause BSD License, https://github.com/janelia-arduino/Array 
 #include <RegExp.h>             // generous license, https://github.com/nickgammon/Regexp
-
-#include <TFT_eSPI.h>
-#include <epd2in9b.h>
+#include <TFT_eSPI.h>           // FreeBSD/BSD license, https://github.com/Bodmer/TFT_eSPI/tree/master 
+#include <epd2in9b.h>           // fairly unrestricted use, see header file
 #include "../fonts/DejaVuSans13pt7b.h"
 #include "../fonts/DejaVuSansBold13pt7b.h"
 #include "../fonts/DejaVuSans24pt7b.h"

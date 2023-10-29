@@ -1,4 +1,4 @@
-# MyDashboard for OpenHAB -- home status at a glance
+# MyDashboard for openHAB <br> home automation status at a glance
 
 This is part of my home automation setup. For details, see my [blog](https://requireiot.com/my-home-automation-story-part-1/).
 
@@ -14,7 +14,7 @@ Before I leave the house, I want to see an overview of all relevant home automat
 
 For this, I have a small, battery-powered display next to the front door. It has a Wifi connection to the home network, and pulls all relevant OpenHAB variables via its REST interface, every hour, and at the push of a button.
 
-The display layout and set of OpenHAB variables are configurable via a JSON text embedded in the source code -- in the future, this could also be read ffrom flash fiel storage, or pulled from an external server.
+The display layout and set of OpenHAB variables are configurable via a JSON text embedded in the source code -- in the future, this could also be read from flash file storage, or pulled from an external server.
 
 For details, see the [requirements specification](REQUIREMENTS.md).
 
@@ -74,20 +74,22 @@ Text rendering is done with the excellent [TFT_eSPI library](https://github.com/
 
 The device supports OTA firmware updates, despite the fact that it is in deep sleep most of the time. How? When it wakes up, it checks an OpenHAB switch item named `EnableOTA`, and if that is ON, then the device does not go back to sleep, but waits for an OTA request. It also turns the OpenHAB item back to OFF. 
 
-So, for an OTA firmware updatem
+So, for an OTA firmware update,
 - compile your code for the target that has "-ota" in its name (look at `platformio.ini` and adjust the IP address or device hostname to match your conguration)
-- set the OpenHAB item `EnableOTA` to ON, e.g. using the REST API, or Basic UI, or shatever you prefer
+- set the OpenHAB item `EnableOTA` to ON, e.g. using the REST API, or Basic UI, or whatever you prefer
+- push the button to wake up the dashboard module
 - wait for the item to revert to OFF
 - upload your firmware from Platformio
 
 ## Power saving considerations
 
-- minimize deep sleep power consumption:
+Minimize deep sleep power consumption:
   - a bare ESP-12F module is better than a Wemos D1 or NodeMCU development module -- probably due to the voltage regulator and USB interfaces on those modules
   - while the e-Ink *display* consumes virtually no power when displaying static content, the e-Ink *module* consumes ~250µA, probably due to level shifters. Solution: the e-Ink module must be powered off during sleep. It is powered from a GPIO line of the ESP8266
-  - connect the processor directly to batteries without a voltage regulator, avoiding any quiescent current. A bare ESP-12F on bench power supply works down to **2.2V**, fails at **2.0V**, so should be ok with 2x AA batteries
   - even with the e-Ink display module powered off, there is still some currect due to pull-up resistors on the ESP8266 side, if GPIO0 and GPIO2 are connected directly to the display module. Solution: connect to display module via Schottky diodes.
-- minimize the duration of active Wifi during a wake period:
+  - connect the processor directly to batteries without a voltage regulator, avoiding any quiescent current. A bare ESP-12F on bench power supply works down to **2.2V**, fails at **2.0V**, so should be ok with 2x AA batteries
+
+Minimize the duration of active Wifi during a wake period:
   - try to reconnect to Wifi using previously established SSID, IP and channel number, which are cached in flash file system
   - parsing the layout definition requires network access for REST requests to the OpenHAB server
   - the parsed layout definition is cached in flash fiel system

@@ -5,7 +5,7 @@
  * Created		: 01-Mar-2022
  * Tabsize		: 4
  * 
- * This Revision: $Id: MyDashboard.cpp 1514 2023-05-22 08:01:36Z  $
+ * This Revision: $Id: MyDashboard.cpp 1554 2023-10-29 13:34:03Z  $
  */
 
 /*
@@ -26,9 +26,9 @@
 /* Pinout
   D0 = GPIO16 connect to RST via 1N5817 diode, also 'USER' key on NodeMCU
   D1 = GPIO5  = BUSY  =           
-  D2 = GPIO4  = Power
-  D3 = GPIO0  = DC    = 'FLASH' key
-  D4 = GPIO2  = CS    = Blue LED  
+  D2 = GPIO4  = Power to e-Ink display
+  D3 = GPIO0  = DC    = 'FLASH' key, pull-up
+  D4 = GPIO2  = CS    = Blue LED, pull-up,   
   D5 = GPIO14 = SCK               
   D6 = GPIO12 = MISO              
   D7 = GPIO13 = MOSI              

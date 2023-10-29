@@ -1,11 +1,11 @@
-MyDashboard - OpenHab at a Glance
+MyDashboard - openHAB at a Glance
 ====
 
 ## Use Cases
 * when leaving the house, see at a glance all relevant home automation information, such as
   * are all windows closed?
   * are all appliances turned off?
-  * what is the outside temperature?
+  * what is the outside temperature? i.e. should I wear a coat?
 
 ## Requirements
 

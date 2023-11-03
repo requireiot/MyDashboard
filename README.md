@@ -1,5 +1,4 @@
-<strong><big><big><big>MyDashboard for openHAB <br> home automation status at a glance</big></big></big></strong>
-
+MyDashboard for openHAB <br> home automation status at a glance
 ----
 This is part of my home automation setup. For details, see my [blog](https://requireiot.com/my-home-automation-story-part-1/).
 

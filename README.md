@@ -4,6 +4,16 @@ This is part of my home automation setup. For details, see my [blog](https://req
 
 <img src="images/outside.jpg" width="500" />
 
+- [MyDashboard for openHAB  home automation status at a glance](#mydashboard-for-openhab--home-automation-status-at-a-glance)
+  - [Objective](#objective)
+  - [Architecture](#architecture)
+  - [Build instructions](#build-instructions)
+  - [Configuration](#configuration)
+  - [Dependencies](#dependencies)
+  - [Over-the-air update](#over-the-air-update)
+  - [Power saving considerations](#power-saving-considerations)
+  - [Power consumption and battery life](#power-consumption-and-battery-life)
+
 ## Objective
 
 Before I leave the house, I want to see an overview of all relevant home automation variables
@@ -65,7 +75,7 @@ Layout elements are displayed as follows:
 
 ## Dependencies
 
-The dashboard software uses a slightly modified version of the Waveshare Arduino driver library for e-Paper displays, included in this repository, the origina Waveshare one is [here](https://github.com/soonuse/epd-library-arduino/tree/master/2.9inch_e-paper_b).
+The dashboard software uses a slightly modified version of the Waveshare Arduino driver library for e-Paper displays, included in this repository, the original Waveshare one is [here](https://github.com/soonuse/epd-library-arduino/tree/master/2.9inch_e-paper_b).
 
 Text rendering is done with the excellent [TFT_eSPI library](https://github.com/Bodmer/TFT_eSPI), using fonts (in the fonts/ subfolder) generated with the help of the [Squix font converter](https://oleddisplay.squix.ch/).
 

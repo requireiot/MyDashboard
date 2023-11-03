@@ -1,18 +1,9 @@
-# MyDashboard for openHAB <br> home automation status at a glance
+<strong><big><big><big>MyDashboard for openHAB <br> home automation status at a glance</big></big></big></strong>
 
+----
 This is part of my home automation setup. For details, see my [blog](https://requireiot.com/my-home-automation-story-part-1/).
 
 <img src="images/outside.jpg" width="500" />
-
-- [MyDashboard for openHAB  home automation status at a glance](#mydashboard-for-openhab--home-automation-status-at-a-glance)
-  - [Objective](#objective)
-  - [Architecture](#architecture)
-  - [Build instructions](#build-instructions)
-  - [Configuration](#configuration)
-  - [Dependencies](#dependencies)
-  - [Over-the-air update](#over-the-air-update)
-  - [Power saving considerations](#power-saving-considerations)
-  - [Power consumption and battery life](#power-consumption-and-battery-life)
 
 ## Objective
 
